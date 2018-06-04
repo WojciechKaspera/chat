@@ -1,0 +1,18 @@
+<header>
+  <div class="info-box" (click)="showChosen()">
+    <p class="user"> WK awesome chat </p>
+    <p class="welcome" *ngIf="chosenUser.name"> Hello {{chosenUser.name}}! </p>
+  </div>
+  <div class="settings-btn-box">
+    <img routerLink="/settings" src="../../../../assets/settingsBtn.png">
+  </div>
+</header>
+
+<!--<ul *ngIf="userData.length">-->
+  <!--<li *ngFor="let user of userData"> {{ user.firstName }} {{user.lastName}} <span class="{{ user.status }}">  </span> </li>-->
+
+<!--</ul>-->
+<!--<input type="text" name="login" ngModel #login (keyup) ="updateInfo($event)">-->
+<!--<button (click) = "showSmth(login.value)">zrob cos</button>-->
+<!--{{ info }}-->
+

@@ -1,0 +1,17 @@
+<section class="main-screen">
+  <div class="chat-box" id="chatBox" (click)="show()">
+    <div class="chat-wrapper" id="chatWrapper">
+    <p class="chat" *ngFor="let chatMessage of history">
+      <span class="time">{{chatMessage.messageObject?.time}}</span>
+      <span class="sender">{{chatMessage.messageObject?.sender}}</span> <br>
+      <span class="message">{{chatMessage.messageObject?.message}}</span>
+    </p>
+    </div>
+  </div>
+
+  <div class="chat-users-box">
+    <mat-list role="list">
+      <mat-list-item role="listitem" class="user" *ngFor="let user of users, let i = index" (click)="showHistory(user)" [ngClass]="{'picked': picked === user.name, 'unread': (unread[i]?.unread) }"><span class="{{user?.status}}">{{user?.name}}</span></mat-list-item>
+    </mat-list>
+  </div>
+</section>

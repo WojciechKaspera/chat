@@ -1,0 +1,6 @@
+<form class="login-box" [formGroup]="form" (ngSubmit)="changeUser(form.get('name').value, form.get('password').value)">
+  <input class="login-input" type="text" placeholder="Type in your login" #userName required formControlName="name">
+  <input class="login-input" type="password" placeholder="Type in your password" #password required formControlName="password">
+  <button class="login-button" type="submit" [disabled]="!form.valid">Go!</button>
+</form>
+

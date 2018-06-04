@@ -1,0 +1,7 @@
+
+<footer>
+  <form [formGroup]="form" (ngSubmit)="addMessage(message.value)">
+  <input name="message" #message formControlName="message">
+  <button mat-raised-button type="submit">Send</button>
+  </form>
+</footer>
